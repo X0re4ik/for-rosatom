@@ -17,6 +17,9 @@ class Company(models.Model):
     
     division = models.ForeignKey(Division, on_delete=models.CASCADE)
     
+    class Meta:
+        unique_together = ('name', 'division')
+    
     def __str__(self) -> str:
         return f'Company {self.name}'
 

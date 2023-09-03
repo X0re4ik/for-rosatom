@@ -10,19 +10,19 @@ from django.db.models import Q
 class DivisionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Division
-        fields = ['name',]
+        fields = '__all__'
 
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = ['name', 'division',]
+        fields = '__all__'
 
 class QuestionnaireSerializer(serializers.ModelSerializer):
     company = CompanySerializer()
     
     class Meta:
         model = Questionnaire
-        fields = ['question', 'email', 'time_of_creat', 'company',]
+        fields = '__all__'
     
     
     def create(self, validated_data: dict):
@@ -32,6 +32,7 @@ class QuestionnaireSerializer(serializers.ModelSerializer):
             Q(name=name) &
             Q(division=division)
         ).first()
+        
         if not company:
             company = Company.objects.create(
                 name=name,
