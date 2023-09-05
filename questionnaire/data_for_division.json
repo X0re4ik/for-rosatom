@@ -1,0 +1,30 @@
+[
+    {
+        "model": "questionnaire.division",
+        "pk": 1,
+        "fields": {
+            "name": "Топливный"
+        }
+    },
+    {
+        "model": "questionnaire.division",
+        "pk": 2,
+        "fields": {
+            "name": "Машиностроение"
+        }
+    },
+    {
+        "model": "questionnaire.division",
+        "pk": 3,
+        "fields": {
+            "name": "ЯОК"
+        }
+    },
+    {
+        "model": "questionnaire.division",
+        "pk": 4,
+        "fields": {
+            "name": "Энергетический"
+        }
+    } 
+]

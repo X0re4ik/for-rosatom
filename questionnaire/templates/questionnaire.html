@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>{{title}}</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-error">{{ form.non_field_errors }}</div>
+            
+            <p>
+                <label for="divisions">Выберите дивизион</label>
+                {{form.division}}
+            </p>
+            
+            <p>
+                <label for="company">Выберети компанию</label>
+                {{form.company}}
+            </p>
+
+            <p>
+                <label for="new_company">Не нашли свое предпритие? Введите его название</label>
+                {{form.new_company}}
+            </p>
+
+            <p>
+                <label for="email">Хотите получить ответ на почту?</label>
+                {{form.email}}
+            </p>
+
+            <p>
+                <label for="question">Вопрос</label>
+                {{form.question}}
+            </p>
+            <input id='submit' type='submit'/>
+
+        </form>
+        {% load static %}
+        <script src="{% static 'js/questionnaire.js' %}"></script>
+    </body>
+</html>
