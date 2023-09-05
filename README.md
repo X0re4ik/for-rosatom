@@ -139,7 +139,7 @@ answer:
 
 ```
 # Добавления компании
-command: http POST http://127.0.0.1:8000/questionnaire/api/v1/add_company "name"="АОО \"УМЗА\"" "division"=1
+command: http POST http://127.0.0.1:8000/questionnaire/api/v1/add_of_company "name"="АОО \"УМЗА\"" "division"=1
 answer: 
   ...
   Content-Type: application/json
