@@ -8,8 +8,7 @@
 2) `python -m venv .env`
 3) `.\.env\Scripts\activate`
 4) `pip install -r requirements.txt`
-5) `cd app`
-6) Установить свои параметры базы данных
+5) Установить свои параметры базы данных
 
 ```
 DATABASES = {
@@ -23,10 +22,10 @@ DATABASES = {
     }
 }
 ```
-8) `python manage.py migrate`
-9) `python manage.py makemigrations questionnaire`
-10) `python manage.py loaddata questionnaire/data_for_division.json`
-11) `python manage.py runserver`
+6) `python manage.py migrate`
+7) `python manage.py makemigrations questionnaire`
+8) `python manage.py loaddata questionnaire/data_for_division.json`
+9) `python manage.py runserver`
 
 ```
 # Запрос на получение всех доступных дивизионов
