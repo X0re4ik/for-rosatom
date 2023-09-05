@@ -27,6 +27,10 @@ DATABASES = {
 8) `python manage.py loaddata questionnaire/data_for_division.json`
 9) `python manage.py runserver`
 
+Для работы с http рекомендую установить `httpie`:
+```
+pip install httpie
+```
 ```
 # Запрос на получение всех доступных дивизионов
 command: http GET http://127.0.0.1:8000/questionnaire/api/v1/list_of_divisions
