@@ -10,7 +10,7 @@
 4) `pip install -r requirements.txt`
 5) `cd app`
 6) Установить свои параметры базы данных
- 
+
 ```
 DATABASES = {
     'default': {
@@ -25,7 +25,8 @@ DATABASES = {
 ```
 8) `python manage.py migrate`
 9) `python manage.py makemigrations questionnaire`
-10) `python manage.py runserver`
+10) `python manage.py loaddata questionnaire/data_for_division.json`
+11) `python manage.py runserver`
 
 ```
 # Запрос на получение всех доступных дивизионов
